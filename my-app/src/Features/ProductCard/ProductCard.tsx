@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import './productCard.css'
+import './ProductCard.css'
 
 interface Props{
     name:string
@@ -9,8 +9,9 @@ interface Props{
 
 const productCard = ({name, price, imageUrl}:Props):React.JSX.Element =>{
     return <div className="productCard">
-        <img src = {imageUrl} alt = 'new'/>
+        <img className = 'productImage' src = {imageUrl}/>
         <h2>{name}: {price.toString()}$</h2>
-        </div>
-
+        </div>;
 }
+
+export default productCard;
